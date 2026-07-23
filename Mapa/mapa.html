@@ -1,1 +1,161 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Mapa — Stockowa</title>
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    crossorigin=""
+  />
+
+  <link rel="stylesheet" href="mapa.css" />
+</head>
+<body>
+
+  <header class="map-header">
+    <div class="map-header-container">
+      <a href="../index.html" class="logo">
+        <span class="logo-icon">S</span>
+        <span class="logo-text">Stockowa</span>
+      </a>
+
+      <nav class="map-nav">
+        <a href="../index.html">Strona główna</a>
+        <a href="mapa.html" class="active">Mapa</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="map-page">
+    <section class="map-intro">
+      <p class="map-label">Interaktywna mapa</p>
+      <h1>Wybierz rzut mapy</h1>
+      <p>
+        Przełączaj widok pomiędzy mapą zwykłą, topograficzną oraz satelitarną.
+        Dodawaj też własne miejsca i zapisuj je na mapie.
+      </p>
+    </section>
+
+    <section class="map-layout">
+      <div class="map-content">
+        <div class="map-wrapper">
+          <div id="map"></div>
+        </div>
+
+        <section class="category-section">
+          <div class="category-heading">
+            <p>Kategorie miejsc</p>
+            <h2>Pokaż punkty na mapie</h2>
+          </div>
+
+          <div class="category-buttons">
+            <button class="category-button" data-category="viewpoint">
+              Punkty widokowe
+            </button>
+
+            <button class="category-button" data-category="monument">
+              Zabytki
+            </button>
+
+            <button class="category-button" data-category="parking">
+              Parkingi
+            </button>
+          </div>
+        </section>
+      </div>
+
+      <aside class="map-sidebar">
+        <h2>Rzuty mapy</h2>
+        <p>Wybierz typ widoku:</p>
+
+        <div class="map-options">
+          <button class="map-option active" data-layer="standard">
+            <span class="option-title">Mapa zwykła</span>
+            <span class="option-desc">Klasyczny widok ulic, miast i dróg.</span>
+          </button>
+
+          <button class="map-option" data-layer="topographic">
+            <span class="option-title">Rzut topograficzny</span>
+            <span class="option-desc">Widok terenu, ukształtowania i geografii.</span>
+          </button>
+
+          <button class="map-option" data-layer="satellite">
+            <span class="option-title">Mapa satelitarna</span>
+            <span class="option-desc">Widok zdjęć satelitarnych z góry.</span>
+          </button>
+        </div>
+
+        <div class="add-place-panel">
+          <h2>Dodaj miejsce</h2>
+          <p>
+            Włącz znacznik, przesuń go na wybrane miejsce i dodaj lokalizację.
+          </p>
+
+          <button id="enable-marker-btn" class="sidebar-main-button">
+            Włącz znacznik
+          </button>
+
+          <button id="open-form-btn" class="sidebar-secondary-button" disabled>
+            Dodaj lokalizację
+          </button>
+
+          <form id="place-form" class="place-form hidden">
+            <label>
+              Tytuł
+              <input
+                type="text"
+                id="place-title"
+                placeholder="Np. Punkt widokowy nad rzeką"
+                required
+              />
+            </label>
+
+            <label>
+              Kategoria
+              <select id="place-category" required>
+                <option value="viewpoint">Punkty widokowe</option>
+                <option value="monument">Zabytki</option>
+                <option value="parking">Parkingi</option>
+              </select>
+            </label>
+
+            <label>
+              Zdjęcie miejsca
+              <input
+                type="file"
+                id="place-image"
+                accept="image/*"
+              />
+            </label>
+
+            <label>
+              Opis
+              <textarea
+                id="place-description"
+                rows="4"
+                placeholder="Krótki opis miejsca..."
+                required
+              ></textarea>
+            </label>
+
+            <button type="submit" class="sidebar-main-button">
+              Zapisz na mapie
+            </button>
+          </form>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    crossorigin=""
+  ></script>
+
+  <script src="mapa.js"></script>
+</body>
+</html>
