@@ -57,6 +57,7 @@
               placeholder="np. las, miasto, technologia"
               autocomplete="off"
             />
+
             <label class="visually-hidden" for="type-filter">Typ materiału</label>
             <select id="type-filter" name="type">
               <option value="all">Wszystkie typy</option>
@@ -64,6 +65,7 @@
               <option value="grafika">Grafiki</option>
               <option value="wideo">Wideo</option>
             </select>
+
             <button type="submit">Szukaj</button>
           </form>
 
@@ -92,11 +94,13 @@
               <strong>Natura</strong>
               <small>Krajobrazy, rośliny i zwierzęta</small>
             </button>
+
             <button class="category-card category-city" type="button" data-search="miasto">
               <span class="category-icon" aria-hidden="true">M</span>
               <strong>Miasto</strong>
               <small>Architektura, ulice i transport</small>
             </button>
+
             <button class="category-card category-tech" type="button" data-search="technologia">
               <span class="category-icon" aria-hidden="true">T</span>
               <strong>Technologia</strong>
@@ -117,7 +121,12 @@
           </div>
 
           <div class="asset-grid" id="asset-grid">
-            <article class="asset-card" data-title="Górskie jezioro o świcie" data-type="zdjecie" data-tags="natura góry jezioro krajobraz">
+            <article
+              class="asset-card"
+              data-title="Górskie jezioro o świcie"
+              data-type="zdjecie"
+              data-tags="natura góry jezioro krajobraz"
+            >
               <div class="asset-preview preview-lake" role="img" aria-label="Abstrakcyjny podgląd górskiego jeziora">
                 <span>Zdjęcie</span>
               </div>
@@ -127,7 +136,12 @@
               </div>
             </article>
 
-            <article class="asset-card" data-title="Ruch uliczny nocą" data-type="wideo" data-tags="miasto ulica transport noc">
+            <article
+              class="asset-card"
+              data-title="Ruch uliczny nocą"
+              data-type="wideo"
+              data-tags="miasto ulica transport noc"
+            >
               <div class="asset-preview preview-city" role="img" aria-label="Abstrakcyjny podgląd nocnego miasta">
                 <span>Wideo</span>
               </div>
@@ -137,7 +151,12 @@
               </div>
             </article>
 
-            <article class="asset-card" data-title="Sieć cyfrowych połączeń" data-type="grafika" data-tags="technologia sieć dane internet">
+            <article
+              class="asset-card"
+              data-title="Sieć cyfrowych połączeń"
+              data-type="grafika"
+              data-tags="technologia sieć dane internet"
+            >
               <div class="asset-preview preview-network" role="img" aria-label="Abstrakcyjny podgląd cyfrowej sieci">
                 <span>Grafika</span>
               </div>
@@ -147,7 +166,12 @@
               </div>
             </article>
 
-            <article class="asset-card" data-title="Las we mgle" data-type="zdjecie" data-tags="natura las drzewa mgła">
+            <article
+              class="asset-card"
+              data-title="Las we mgle"
+              data-type="zdjecie"
+              data-tags="natura las drzewa mgła"
+            >
               <div class="asset-preview preview-forest" role="img" aria-label="Abstrakcyjny podgląd lasu we mgle">
                 <span>Zdjęcie</span>
               </div>
@@ -157,7 +181,12 @@
               </div>
             </article>
 
-            <article class="asset-card" data-title="Nowoczesna architektura" data-type="zdjecie" data-tags="miasto architektura budynek">
+            <article
+              class="asset-card"
+              data-title="Nowoczesna architektura"
+              data-type="zdjecie"
+              data-tags="miasto architektura budynek"
+            >
               <div class="asset-preview preview-building" role="img" aria-label="Abstrakcyjny podgląd nowoczesnego budynku">
                 <span>Zdjęcie</span>
               </div>
@@ -167,7 +196,12 @@
               </div>
             </article>
 
-            <article class="asset-card" data-title="Praca zdalna" data-type="wideo" data-tags="technologia komputer praca biuro">
+            <article
+              class="asset-card"
+              data-title="Praca zdalna"
+              data-type="wideo"
+              data-tags="technologia komputer praca biuro"
+            >
               <div class="asset-preview preview-work" role="img" aria-label="Abstrakcyjny podgląd stanowiska komputerowego">
                 <span>Wideo</span>
               </div>
@@ -204,7 +238,15 @@
           <span class="brand-mark" aria-hidden="true"></span>
           <span>Bank Stockowy</span>
         </a>
-        <p>Projekt demonstracyjny · <span id="current-year"></span></p>
+
+        <div class="footer-actions">
+          <nav class="footer-links" aria-label="Linki w stopce">
+            <a href="kontakt.html">Kontakt</a>
+            <a href="regulamin.html">Regulamin</a>
+            <a href="rodo.html">RODO</a>
+          </nav>
+          <p class="footer-meta">Projekt demonstracyjny · <span id="current-year"></span></p>
+        </div>
       </div>
     </footer>
 
